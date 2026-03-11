@@ -8,6 +8,8 @@
         <title>Lista de Exercícios PHP</title>
 
         <style>
+                /* RESET */
+
                 * {
                         margin: 0;
                         padding: 0;
@@ -15,20 +17,44 @@
                         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 }
 
+                /* BODY */
+
                 body {
-                        background: linear-gradient(135deg, #0f172a, #1e293b, #020617);
+                        background: linear-gradient(-45deg, #0f172a, #1e293b, #020617, #1e3a8a);
+                        background-size: 400% 400%;
+                        animation: bg 12s ease infinite;
                         min-height: 100vh;
-                        padding: 40px;
+                        padding: 50px;
                         color: white;
                 }
 
+                /* ANIMAÇÃO DO FUNDO */
+
+                @keyframes bg {
+                        0% {
+                                background-position: 0% 50%;
+                        }
+
+                        50% {
+                                background-position: 100% 50%;
+                        }
+
+                        100% {
+                                background-position: 0% 50%;
+                        }
+                }
+
+                /* HEADER */
+
                 header {
                         text-align: center;
-                        margin-bottom: 40px;
+                        margin-bottom: 50px;
                 }
 
                 header h1 {
-                        font-size: 42px;
+                        font-size: 46px;
+                        font-weight: 700;
+                        letter-spacing: 1px;
                         margin-bottom: 10px;
                 }
 
@@ -40,11 +66,12 @@
                 /* TITULOS DAS SEÇÕES */
 
                 .section-title {
-                        margin-top: 40px;
+                        margin-top: 50px;
                         margin-bottom: 20px;
-                        font-size: 22px;
-                        border-left: 5px solid #38bdf8;
-                        padding-left: 10px;
+                        font-size: 24px;
+                        font-weight: 600;
+                        padding-left: 15px;
+                        border-left: 6px solid #38bdf8;
                 }
 
                 /* GRID */
@@ -58,44 +85,49 @@
                 /* CARDS */
 
                 .card {
-                        background: rgba(255, 255, 255, 0.08);
-                        backdrop-filter: blur(10px);
-                        padding: 25px;
-                        border-radius: 12px;
+                        background: rgba(255, 255, 255, 0.07);
+                        backdrop-filter: blur(12px);
+                        padding: 28px;
+                        border-radius: 14px;
                         text-align: center;
                         text-decoration: none;
                         color: white;
-                        font-weight: bold;
-                        transition: 0.3s;
+                        font-weight: 600;
+                        font-size: 17px;
+                        transition: all 0.25s ease;
                         border: 1px solid rgba(255, 255, 255, 0.1);
+                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
                 }
 
+                /* HOVER */
+
                 .card:hover {
-                        transform: translateY(-6px) scale(1.03);
-                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+                        transform: translateY(-8px) scale(1.04);
+                        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
                 }
 
                 /* CORES DAS CATEGORIAS */
 
                 .seq:hover {
-                        background: #22c55e;
+                        background: linear-gradient(135deg, #22c55e, #16a34a);
                 }
 
                 .if:hover {
-                        background: #3b82f6;
+                        background: linear-gradient(135deg, #3b82f6, #2563eb);
                 }
 
                 .loop:hover {
-                        background: #f59e0b;
+                        background: linear-gradient(135deg, #f59e0b, #d97706);
                 }
 
                 /* FOOTER */
 
                 footer {
                         text-align: center;
-                        margin-top: 60px;
+                        margin-top: 70px;
                         opacity: 0.6;
                         font-size: 14px;
+                        letter-spacing: 0.5px;
                 }
         </style>
 
@@ -104,7 +136,7 @@
 <body>
 
         <header>
-                <h1> 🐘 Lista de Exercícios PHP</h1>
+                <h1>🐘 Lista de Exercícios PHP</h1>
                 <p>Estruturas Sequenciais • Decisão • Laços de Repetição</p>
         </header>
 
@@ -146,11 +178,17 @@
                 <a href="exer11.php" class="card loop">Exercício 11</a>
                 <a href="exer12.php" class="card loop">Exercício 12</a>
 
-                <a href="exer13.php" class="card loop">Exercício 13</a>
-                <a href="exer14.php" class="card loop">Exercício 14</a>
-                <a href="exer15.php" class="card loop">Exercício 15</a>
-
         </div>
+
+        <!-- Arrays -->
+        <h2 class="section-title">Arrays</h2>
+
+        <div class="container">
+        <a href="exer13.php" class="card loop">Exercício 13</a>
+        <a href="exer14.php" class="card loop">Exercício 14</a>
+        <a href="exer15.php" class="card loop">Exercício 15</a>
+        </div>
+
 
         <footer>
                 Trabalho de PHP • Técnico em Informática
